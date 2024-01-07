@@ -7,6 +7,7 @@ export type VerticalPaddingOptions = 'large' | 'medium' | 'none'
 type Props = {
   top?: VerticalPaddingOptions
   bottom?: VerticalPaddingOptions
+  disableBottomPadding?: boolean
   children: React.ReactNode
   className?: string
 }
@@ -14,6 +15,7 @@ type Props = {
 export const VerticalPadding: React.FC<Props> = ({
   top = 'medium',
   bottom = 'medium',
+  disableBottomPadding,
   className,
   children,
 }) => {
