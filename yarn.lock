@@ -5488,7 +5488,7 @@ isomorphic-unfetch@^3.0.0:
     node-fetch "^2.6.1"
     unfetch "^4.2.0"
 
-jackspeak@^2.3.5:
+jackspeak@2.1.1, jackspeak@^2.3.5:
   version "2.1.1"
   resolved "https://registry.npmjs.org/jackspeak/-/jackspeak-2.1.1.tgz"
   integrity sha512-juf9stUEwUaILepraGOWIJTLwg48bUnBmRqd2ln2Os1sW987zeoj/hzhbvRB95oMuS2ZTpjULmdwHNX4rzZIZw==
