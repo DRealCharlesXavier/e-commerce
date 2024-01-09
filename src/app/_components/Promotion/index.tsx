@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react'
 
 import classes from './index.module.scss'
-// import { setInterval } from 'timers/promises'
 
 const Promotion = () => {
   const [time, setTime] = useState({
@@ -11,11 +10,11 @@ const Promotion = () => {
     minutes: 0,
     seconds: 0,
   })
- 
- const targetDate = new Date()
- targetDate.setDate(targetDate.getDate() + 7)
 
- useEffect(() => {
+  const targetDate = new Date()
+  targetDate.setDate(targetDate.getDate() + 3)
+
+  useEffect(() => {
     const timerInterval = setInterval(() => {
       const currentTime = new Date()
       const timeDifference = Math.max(Number(targetDate) - Number(currentTime), 0)
@@ -32,13 +31,11 @@ const Promotion = () => {
         // You can add code here to handle what happens when the target date is reached.
       }
     }, 1000)
- 
-   return () => {
-    clearInterval(timerInterval) 
-    // cleanup the interval when the component unmounts.
-   }
- }, [])
- 
+
+    return () => {
+      clearInterval(timerInterval) // Cleanup the interval when the component unmounts.
+    }
+  }, [])
 
   return (
     <section className={classes.promotion}>

@@ -11,13 +11,12 @@ const Categories = ({ categories }: { categories: Category[] }) => {
       <div className={classes.titleWrapper}>
         <h3>Shop by Categories</h3>
         <Link href="/products">Show All</Link>
-    </div>
-    
-    <div className={classes.list}>
-     {categories.map((category) => (
-       <CategoryCard key={category.id} category={category} />
-     ))}
-    </div>
+      </div>
+      <div className={classes.list}>
+        {categories.map(category => (
+          <CategoryCard key={category.id} category={category} />
+        ))}
+      </div>
     </section>
   )
 }
